@@ -2,11 +2,9 @@
 
 /**
  * Created by PhpStorm.
- * User: bingone
- * Date: 16/1/19
- * Time: 下午4:15
+ * User: zhouzhao
+ * Date: 2017年4月11日 10:05:10
  */
-
 class Result
 {
     public $success;
@@ -14,8 +12,7 @@ class Result
     public $requestData;
     public $responseData;
     public $error;
-    public function __construct($statusCode=null,$requestData = null, $responseData = null,$error=null )
-    {
+    public function __construct($statusCode=null,$requestData = null, $responseData = null,$error=null ) {
         $this->success = false;
         if ($statusCode == 200)
             $this->success = true;
@@ -25,10 +22,10 @@ class Result
         $this->error = $error;
     }
 
-    public function getData()
-    {
+    public function getData() {
         return $this->responseData;
     }
+
     public function isSuccess(){
         return $this->success;
     }
